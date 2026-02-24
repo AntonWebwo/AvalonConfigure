@@ -22,7 +22,7 @@
 ### Сборка
 
 ```bash
-cl /EHsc AvalonConfigure.cpp
+cl /EHsc /O2 /MT /GL AvalonConfigure.cpp /link winhttp.lib /Fe:AvalonConfigure.exe /OPT:REF /OPT:ICF
 ```
 
 ---
