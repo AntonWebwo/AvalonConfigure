@@ -36,21 +36,7 @@ AvalonConfigure.exe [опции]
 ### Пример запуска:
 
 ```bash
-AvalonConfigure.exe \
-  --url 192.168.1.100 \
-  --user root \
-  --password root \
-  --pool1 stratum+tcp://pool.example.com:3333 \
-  --worker1 worker1 \
-  --passwd1 pass123 \
-  --pool2 stratum+tcp://backup.pool.com:4444 \
-  --worker2 worker2 \
-  --passwd2 pass456 \
-  --pool3 stratum+tcp://third.pool.com:5555 \
-  --worker3 worker3 \
-  --passwd3 pass789 \
-  --mode mining \
-  --moreoption extra_data
+AvalonConfigure.exe --url "10.4.167.253" --user "root" --password "root" --pool1 "stratum+tcp://pool.example.com:3333" --worker1 "worker1" --passwd1 "x" --pool2 "stratum+tcp://backup.pool.com:4444" --worker2 "worker2" --passwd2 "x" --pool3 "stratum+tcp://third.pool.com:5555" --worker3 "worker3" --passwd3 "x" --mode "1" --moreoption "--avalon10-smart-speed 1"
 ```
 
 ### Все опции:
@@ -76,7 +62,7 @@ AvalonConfigure.exe \
 {
   "status": "success",
   "http_code": 200,
-  "message": "Configuration request sent to 192.168.1.100",
+  "message": "Configuration request sent to 10.4.167.253",
   "credentials": {
     "user": "root",
     "password": "root"
@@ -84,9 +70,16 @@ AvalonConfigure.exe \
   "request": {
     "pool1": "stratum+tcp://pool.example.com:3333",
     "worker1": "worker1",
-    "passwd1": "pass123",
-    ...
-  }
+    "passwd1": "x",
+    "pool2": "stratum+tcp://pool.example.com:4444",
+    "worker2": "worker2",
+    "passwd2": "x",
+    "pool3": "stratum+tcp://pool.example.com:5555",
+    "worker3": "worker3",
+    "passwd3": "x",
+    "mode": "1",
+    "moreoption": "--avalon10-smart-speed 1"
+  },
 }
 ```
 
